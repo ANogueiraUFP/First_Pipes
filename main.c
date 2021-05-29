@@ -21,7 +21,7 @@ float percentagem = 0.0;
 int main(int argc, char *argv[]) {
     
     //first(argc, argv);
-    pipes(argc, argv);
+    //pipes(argc, argv);
     
     return 0;
 }
@@ -60,7 +60,7 @@ void first(int argc, char *argv[]) {
     int *pids = newIntArray(nFilhos);
     
     //Path do ficheiro de input
-    char local[BUF_SIZE] = "/Users/anogueira/Desktop/Final/First_Pipes/output/";
+    char local[BUF_SIZE] = "/Users/anogueira/Desktop/SO_PL/output/";
     
     //String auxiliar para criar ficheiro de output
     char str[100];
@@ -86,7 +86,7 @@ void first(int argc, char *argv[]) {
     GENOME_LIST *gl = (GENOME_LIST *) calloc(1, sizeof(GENOME_LIST));
     
     //Input para a lista do ficheiro de genomas
-    read_genomes(gl, "/Users/anogueira/Desktop/SO_First_Sockets/input/cds.fna");
+    read_genomes(gl, "/Users/anogueira/Desktop/SO_PL/input/cds.fna");
     
     //Variavel com total de genomas lidos
     TOTAl = (int) gl->n_genomes;
@@ -191,7 +191,7 @@ void pipes(int argc, char *argv[]) {
     char bufIn[BUF_SIZE];
     
     //Path para guardar o ficheiro final
-    char localPipes[BUF_SIZE] = "/Users/anogueira/Desktop/Final/First_Pipes/output/pipes.txt";
+    char localPipes[BUF_SIZE] = "/Users/anogueira/Desktop/SO_PL/output/pipes.txt";
     
     //Instalação do sinal
     struct sigaction sa;
@@ -214,7 +214,7 @@ void pipes(int argc, char *argv[]) {
     GENOME_LIST *gl = (GENOME_LIST *) calloc(1, sizeof(GENOME_LIST));
     
     //Input para a lista do ficheiro de genomas
-    read_genomes(gl, "/Users/anogueira/Desktop/Final/First_Pipes/input/cds.fna");
+    read_genomes(gl, "/Users/anogueira/Desktop/SO_PL/input/cds.fna");
     
     //Variavel com total de genomas lidos
     TOTAl = (int) gl->n_genomes;
